@@ -4,13 +4,13 @@
 #include<vector>
 using namespace std;
 
-vector<int> num; //Ïàµ±ÓÚint a[]µÄÕûĞÎÊı×é
-vector<int> pile[101]; //Ã¿¸öpile[i]¶¼ÊÇÒ»¸övector
+vector<int> num; //ç›¸å½“äºint a[]çš„æ•´å½¢æ•°ç»„
+vector<int> pile[101]; //æ¯ä¸ªpile[i]éƒ½æ˜¯ä¸€ä¸ªvector
 
 int main() {
 	int n;
 	cin >> n;
-	cout << num.size() << endl; //Êä³ö0£¬Ò»¿ªÊ¼³¤¶ÈÎª0
+	cout << num.size() << endl; //è¾“å‡º0ï¼Œä¸€å¼€å§‹é•¿åº¦ä¸º0
 	num.resize(n);
 	for (int i = 0; i < n; i++) {
 		cin >> num[i];
