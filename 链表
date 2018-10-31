@@ -1,0 +1,49 @@
+#include"stdafx.h"
+#include<iostream>
+
+using namespace std;
+
+int n;
+int v[101];
+
+struct Node {
+	int value;
+	Node *next;
+};
+
+void creatNode() {
+	Node *p = new Node;
+	p = NULL;
+	for (int i = 0; i < n; i++) {
+		p->value = v[i];
+		p->next = p->next->next;
+	}
+}
+
+void insert(Node *p, int i) {
+	Node* n = new Node;
+	n->value = i;
+	n->next = p->next;
+	p->next = n;
+}
+
+void delNode(Node *p) {
+	p->value = p->next->value;
+	p->next = p->next->next;
+}
+
+void showList(Node n) {
+	Node *p = new Node;
+	while (p->next != NULL) {
+		cout << p->value << " ";
+	}
+}
+
+int main() {
+	while (cin >> n) {
+		for (int i = 0; i < n; i++) {
+			cin >> v[i];
+		}
+		creatNode();
+	}
+}
